@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>你的名字 · 个人主页</title>
+
+<!-- ⚠️ 下面 4 行是搜索/分享时显示的信息，记得一起改 -->
+<meta name="description" content="一句话说清你是谁、在做什么。例：后端工程师，专注高并发系统与开发者工具。">
+<link rel="canonical" href="https://lv-star.top/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://lv-star.top/">
+<meta property="og:title" content="你的名字 · 个人主页">
+<meta property="og:description" content="一句话说清你是谁、在做什么。">
+<meta property="og:locale" content="zh_CN">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#fbfaf8" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0b0b0e" media="(prefers-color-scheme: dark)">
+
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/assets/style.css">
+
+<script>
+  // 在首帧之前决定明暗主题，避免闪白
+  (function () {
+    try {
+      var saved = localStorage.getItem('theme');
+      var dark = saved ? saved === 'dark'
+                       : window.matchMedia('(prefers-color-scheme: dark)').matches;
+      document.documentElement.dataset.theme = dark ? 'dark' : 'light';
+    } catch (e) {
+      document.documentElement.dataset.theme = 'light';
+    }
+  })();
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "你的名字",
+  "url": "https://lv-star.top/",
+  "jobTitle": "你的职位",
+  "sameAs": []
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">跳到主要内容</a>
+
+<header class="site-header">
+  <a class="brand" href="#top" aria-label="回到顶部">
+    lv<span class="brand-dot">·</span>star
+  </a>
+  <nav class="site-nav" aria-label="主导航">
+    <a href="#works">作品</a>
+    <a href="#about">关于</a>
+    <a href="#contact">联系</a>
+    <button id="theme-toggle" class="theme-toggle" type="button" aria-label="切换明暗主题">
+      <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><g stroke-width="1.8" stroke-linecap="round"><path d="M12 2.6v2.4M12 19v2.4M2.6 12h2.4M19 12h2.4M5.4 5.4l1.7 1.7M16.9 16.9l1.7 1.7M18.6 5.4l-1.7 1.7M7.1 16.9l-1.7 1.7"/></g></svg>
+      <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 14.4A8.6 8.6 0 1 1 9.6 3.5a6.9 6.9 0 0 0 10.9 10.9Z"/></svg>
+    </button>
+  </nav>
+</header>
+
+<main id="main">
+
+  <section class="hero" id="top">
+    <p class="eyebrow"><span class="pulse" aria-hidden="true"></span>正在寻找新的机会</p>
+    <h1>你好，我是<br><span class="grad">你的名字</span></h1>
+    <p class="lead">
+      这里放你的开场白，一到两句就够。说清楚三件事：你在做什么、
+      擅长什么、现在想找什么样的机会或合作。
+    </p>
+    <div class="cta">
+      <a class="btn btn-primary" href="#works">看看我在做什么</a>
+      <a class="btn btn-ghost" href="mailto:hi@lv-star.top">发邮件给我</a>
+    </div>
+  </section>
+
+  <section class="section" id="works">
+    <div class="section-head reveal">
+      <h2>作品</h2>
+      <p>挑三个最拿得出手的，比列十个更能说明问题。</p>
+    </div>
+    <div class="cards">
+      <article class="card reveal">
+        <div class="card-top">
+          <span class="card-kicker">项目一</span>
+          <a class="card-link" href="#" aria-label="查看项目详情">↗</a>
+        </div>
+        <h3>项目名称</h3>
+        <p>一句话说明它解决了什么问题、你的角色是什么、结果如何。有数字最好，比如「把构建时间从 6 分钟降到 40 秒」。</p>
+        <ul class="tags"><li>TypeScript</li><li>React</li><li>性能优化</li></ul>
+      </article>
+      <article class="card reveal">
+        <div class="card-top">
+          <span class="card-kicker">项目二</span>
+          <a class="card-link" href="#" aria-label="查看项目详情">↗</a>
+        </div>
+        <h3>项目名称</h3>
+        <p>同上：问题 → 做法 → 结果。别写「负责某某模块」这种谁都写得出的句子。</p>
+        <ul class="tags"><li>Node.js</li><li>PostgreSQL</li></ul>
+      </article>
+      <article class="card reveal">
+        <div class="card-top">
+          <span class="card-kicker">项目三</span>
+          <a class="card-link" href="#" aria-label="查看项目详情">↗</a>
+        </div>
+        <h3>项目名称</h3>
+        <p>也可以是写作、开源、副业作品。能体现你判断力的东西都算。</p>
+        <ul class="tags"><li>开源</li><li>文档</li></ul>
+      </article>
+    </div>
+  </section>
+
+  <section class="section" id="about">
+    <div class="section-head reveal">
+      <h2>关于</h2>
+    </div>
+    <div class="prose reveal">
+      <p>
+        两到三段。第一段写你现在在做什么；第二段写你的经历里最有说服力的那一两件事；
+        第三段可以写工作之外——你读什么、玩什么、在意什么。个人主页最容易犯的错是写成简历，
+        其实写得像个人反而更容易被记住。
+      </p>
+      <p>
+        如果你在找工作，就明确写出来；如果有档期，也写出来。含糊其辞不会让人主动联系你。
+      </p>
+    </div>
+    <ul class="skills reveal" aria-label="技能">
+      <li>语言</li><li>框架</li><li>数据库</li><li>云服务</li><li>设计</li><li>写作</li>
+    </ul>
+  </section>
+
+  <section class="section" id="contact">
+    <div class="contact-box reveal">
+      <h2>聊点什么？</h2>
+      <p>工作机会、技术问题、合作想法，或者只是打个招呼，都行。</p>
+      <a class="mail" href="mailto:hi@lv-star.top">hi@lv-star.top</a>
+      <ul class="social">
+        <li><a href="#">GitHub</a></li>
+        <li><a href="#">博客</a></li>
+        <li><a href="#">X</a></li>
+      </ul>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <span>© <span id="year">2026</span> lv-star.top</span>
+  <span class="footer-note">用 HTML 和 CSS 手写，没有框架。</span>
+</footer>
+
+<script src="/assets/main.js" defer></script>
+</body>
+</html>
