@@ -46,6 +46,18 @@
       });
     }, { rootMargin: '0px 0px -8% 0px', threshold: 0.12 });
     items.forEach(function (el) { io.observe(el); });
+
+    // 保底：观察器万一没回调，2 秒后把「已经在屏幕里」的元素直接显示出来，
+    // 避免出现「内容明明在视口内却一直透明」的空白页。
+    setTimeout(function () {
+      items.forEach(function (el) {
+        if (el.classList.contains('is-visible')) return;
+        var r = el.getBoundingClientRect();
+        if (r.top < window.innerHeight && r.bottom > 0) {
+          el.classList.add('is-visible');
+        }
+      });
+    }, 2000);
   }
 
   /* ---- 年份 ---- */
